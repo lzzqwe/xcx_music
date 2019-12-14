@@ -1,0 +1,14 @@
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{background}}" wx:key="*this">
+    <swiper-item>
+      <view class="swiper-item">
+        <image mode="widthFix" src="{{ item.url }}"></image>
+      </view>
+    </swiper-item>
+  </block>
+</swiper>
+<view class="song-container">
+  <block wx:key="*this" wx:for="{{playlist}}">
+    <x-playlist playlist="{{item}}"></x-playlist>
+  </block>
+</view>
